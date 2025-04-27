@@ -2,9 +2,12 @@ function calcAverageCalories(days) {
     let totalCalories = 0;
     for (day in days) {
         totalCalories += days[day].calories;// days bir nesne day ve calories ise nesne özellikleri ve nokta ile çağrılabilir bildiğimiz nesne özellikleri
-    }
-    return totalCalories/7 ;
+  } if (days.length === 0) return 0;
+  else {
+    return totalCalories / days.length;
+  }
 }
+
 
 console.log(
   calcAverageCalories([
